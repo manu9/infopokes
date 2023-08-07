@@ -30,6 +30,7 @@ export class CrearPokemonComponent implements OnInit{
     .subscribe( pokemon => {
       //location.reload();
       this.customPokemon.push(this.selectedPokemon);
+      this.selectedPokemon = new CustomPokemon();
     });
     return;
   }

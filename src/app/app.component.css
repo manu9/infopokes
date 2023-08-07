@@ -1,0 +1,12 @@
+.container{
+  display: flex;
+  height: 100vh;
+}
+
+/** Main **/
+
+
+.main{
+  flex: 1;
+  padding: 20px;
+}

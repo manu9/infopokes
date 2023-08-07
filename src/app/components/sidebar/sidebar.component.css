@@ -1,0 +1,51 @@
+.sidebar{
+  min-width: 250px;
+  background-color: #343a40;
+  border-radius: 0 10px 10px 0;
+  height: 100vh;
+}
+
+.navigation__logo{
+  text-decoration: solid;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navigation__menu{
+  padding: 10px;
+}
+
+.navigation__menu__section{
+  margin: 15px 0;
+}
+
+.navigation__menu__section__label{
+  font-size: .857rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255,255,255,.6);
+}
+
+.navigation__menu__buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+.navigation__menu__buttons:hover{
+  cursor: pointer;
+  background-color: #4b545c;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.navigation__menu_button_label{
+  margin-left: 20px;
+}

@@ -1,0 +1,118 @@
+.custom__pokemon{
+  display: flex;
+  flex-direction: column;
+}
+
+.crear-pokemon{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.crear__inputs li{
+  list-style: none;
+  padding: 5px;
+}
+
+.inputName{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.inputUrl{
+  width: 500px;
+  height: 35px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.btn-guardar{
+  width: 150px;
+  height: 35px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: deepskyblue;
+}
+
+.btn-guardar:hover{
+  cursor: pointer;
+  width: 150px;
+  height: 35px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: dodgerblue;
+  font-weight: bold;
+}
+
+/** Cards **/
+
+.custom__pokemon__cards{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+}
+
+.custom__pokemon__card{
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  height: 430px;
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.custom__pokemon__card__name{
+  text-align: center;
+}
+
+.custom__pokemon__card img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.custom__pokemon__card__btn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn__edit{
+  cursor: pointer;
+  background-color: aqua;
+  flex: 1;
+  height: 30px;
+}
+
+.btn__edit:hover{
+  cursor: pointer;
+  background-color: aquamarine;
+  font-weight: bold;
+  flex: 1;
+  height: 30px;
+}
+
+.btn__remove{
+  position: relative;
+  cursor: pointer;
+  background-color: orangered;
+  flex: 1;
+  height: 30px;
+}
+
+.btn__remove:hover{
+  cursor: pointer;
+  background-color: red;
+  font-weight: bold;
+  flex: 1;
+  height: 30px;
+}

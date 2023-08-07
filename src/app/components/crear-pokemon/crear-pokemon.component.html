@@ -1,0 +1,43 @@
+<div class="custom__pokemon">
+  <section>
+    <h1>Crear Pókemon</h1>
+    <hr>
+  </section>
+
+  <section class="crear-pokemon">
+    <ul class="crear__inputs">
+      <li>
+        <span>Nombre de Pókemon</span>
+      </li>
+      <li>
+        <input class="inputName" type="text" [(ngModel)]="selectedPokemon.name">
+      </li>
+      <li>
+        <span>URL Imagen</span>
+      </li>
+      <li>
+        <input class="inputUrl" type="text" [(ngModel)]="selectedPokemon.urlImage">
+      </li>
+      <li>
+        <button class="btn-guardar" (click)="guardarPokemon()">Guardar</button>
+      </li>
+    </ul>
+  </section>
+
+  <section class="custom__pokemon__cards">
+    <div
+        class="custom__pokemon__card"
+        *ngFor="let item of customPokemon">
+      <div class="custom__pokemon__card__btn">
+        <button class="btn__edit" (click)="editarPokemon(item)">Editar</button>
+        <button class="btn__remove" (click)="removerPokemon(item)">Remover</button>
+      </div>
+      <div class="custom__pokemon__card__name">
+        <h1>{{item.name}}</h1>
+      </div>
+      <figure>
+        <img [src]=[item.urlImage] alt="Girl in a jacket">
+      </figure>
+    </div>
+  </section>
+</div>

@@ -1,3 +1,13 @@
+<div class="serachContainer">
+  <form class="formSearch" (ngSubmit)="buscarPokemon()">
+    <input class="searchPokemon" type="text" placeholder="Buscar Pokemon" #txtInput>
+    <span class="ErrorBusqueda" #txtError></span>
+  </form>
+  <button>Limpiar</button>
+</div>
+<hr>
+
 <div class="container">
-  <h1>Bienvenido a INFOPOKE !!!</h1>
+  <card-pokemon class="cardPokemon" *ngFor="let pokemon of listaPokemon" [data]="pokemon">
+  </card-pokemon>
 </div>

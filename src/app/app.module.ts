@@ -8,13 +8,15 @@ import { CrearPokemonComponent } from './components/crear-pokemon/crear-pokemon.
 import { MostrarPokemonComponent } from './components/mostrar-pokemon/mostrar-pokemon.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     CrearPokemonComponent,
-    MostrarPokemonComponent
+    MostrarPokemonComponent,
+    CardPokemonComponent
   ],
   imports: [
     BrowserModule,

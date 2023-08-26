@@ -1,5 +1,8 @@
 <div class="card">
-  <img class="imgPoke" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/{{id}}.svg' alt="Avatar">
+  <article class="artImg">
+    <img class="imgPoke" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/{{id}}.svg' alt="Avatar">
+    <img class="imgPoke_2" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/{{id}}.png' alt="Avatar">
+  </article>
   <div class="container">
     <h4><b><span *ngIf="data">{{data.name | titlecase}}</span></b></h4>
     <p>Id pokemon: <b>{{id}}</b></p>

@@ -29,7 +29,7 @@ export class MostrarPokemonComponent implements OnInit{
 
 
   async buscarPokemon(){
-    const name = this.tagInput.nativeElement.value;
+    let name = this.tagInput.nativeElement.value.toLowerCase();
     let errorMsg = '';
     this.tagInput.nativeElement.value = '';
 

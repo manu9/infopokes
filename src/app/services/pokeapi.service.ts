@@ -20,6 +20,8 @@ export class PokeApiService {
   async getByID(id:string){
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const resJson = await res.json();
+
+    return resJson;
   }
 
   async getByName(name:string){

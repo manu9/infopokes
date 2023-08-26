@@ -42,6 +42,7 @@
   background-image: linear-gradient(to bottom,transparent 10%, rgba(0,0,0,0.5) 50%, rgba(0,0,0) 95%);
   color: white;
   transition: all .3s ease;
+  cursor: pointer;
 }
 
 .card:hover img:last-child{

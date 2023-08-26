@@ -1,0 +1,15 @@
+<section class="containerDetails">
+  <div class="pokeImg">
+    <img class="imgPoke" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/{{detallePokemon.id}}.svg' alt="Avatar">
+  </div>
+  <div class="attribute">
+    <ul>
+      <li><span><b>Id:</b> {{detallePokemon.id}}</span></li>
+      <li><span><b>Nombre:</b> {{detallePokemon.name | titlecase}}</span></li>
+      <li><span><b>Peso:</b> {{detallePokemon.weight}}</span></li>
+      <li><span><b>Experiencia Base:</b> {{detallePokemon.base_experience}}</span></li>
+      <li><span><b>Altura:</b> {{detallePokemon.height}}</span></li>
+    </ul>
+    <button class="btnVolver" routerLink="mostrar">Volver</button>
+  </div>
+</section>

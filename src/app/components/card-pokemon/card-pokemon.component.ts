@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Resultado } from 'src/app/model/PokeApi';
 import { PokeApiService } from '../../services/pokeapi.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'card-pokemon',
@@ -9,7 +10,7 @@ import { PokeApiService } from '../../services/pokeapi.service';
 })
 export class CardPokemonComponent implements OnChanges{
 
-  constructor(private pokeApiService:PokeApiService){}
+  constructor(private pokeApiService:PokeApiService, private router:Router){}
 
   ngOnChanges(changes: SimpleChanges): void {
     this.extraerInformacion();
@@ -29,5 +30,9 @@ export class CardPokemonComponent implements OnChanges{
     }
 
     this.pokeApiService.getByID(this.id);
+  }
+
+  detallePkemon():void{
+    this.router.navigate([`detalle/${this.id}`]);
   }
 }

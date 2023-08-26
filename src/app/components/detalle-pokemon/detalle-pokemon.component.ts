@@ -1,0 +1,43 @@
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PokeApiService } from '../../services/pokeapi.service';
+import { Resultado } from 'src/app/model/PokeApi';
+import { Pokemon } from 'src/app/model/Pokemon';
+
+@Component({
+  selector: 'detalle-pokemon',
+  templateUrl: './detalle-pokemon.component.html',
+  styleUrls: ['./detalle-pokemon.component.css']
+})
+export class DetallePokemonComponent implements OnInit{
+
+  detallePokemon:Pokemon = {
+    id : '',
+    name : '',
+    weight : '',
+    base_experience: '',
+    height: ''
+  };
+
+  constructor(private activatedRoute: ActivatedRoute, private pokeApiService: PokeApiService){}
+
+  ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe(params => {
+      let id = params.get('id');
+      this.cargarPokemon(id || '1');
+    });
+  }
+
+  async cargarPokemon(id:string){
+    const resp = await this.pokeApiService.getByID(id);
+    console.log(resp);
+
+    this.detallePokemon= {
+      id : id,
+      name : resp.name,
+      weight : resp.weight,
+      base_experience: resp.base_experience,
+      height: resp.height
+    };
+  }
+}

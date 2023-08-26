@@ -13,6 +13,12 @@ export class MostrarPokemonComponent implements OnInit{
 
   constructor ( private pokeApiService: PokeApiService){}
 
+  @ViewChild('txtInput')
+  public tagInput !: ElementRef<HTMLInputElement>
+
+  @ViewChild('txtError')
+  public tagTxtError !: ElementRef<HTMLInputElement>
+
   ngOnInit(): void {
     this.cargarPokemones();
   }
@@ -21,11 +27,6 @@ export class MostrarPokemonComponent implements OnInit{
     this.listaPokemon = [...this.listaPokemon, ...await this.pokeApiService.getPokemones()];
   }
 
-  @ViewChild('txtInput')
-  public tagInput !: ElementRef<HTMLInputElement>
-
-  @ViewChild('txtError')
-  public tagTxtError !: ElementRef<HTMLInputElement>
 
   async buscarPokemon(){
     const name = this.tagInput.nativeElement.value;
@@ -50,6 +51,11 @@ export class MostrarPokemonComponent implements OnInit{
     }
 
     this.listaPokemon.push(pokemon);
+  }
 
+  resetSearch(){
+    this.listaPokemon = [];
+    this.tagTxtError.nativeElement.innerHTML = '';
+    this.cargarPokemones();
   }
 }

@@ -8,7 +8,7 @@ export class PokeApiService {
   constructor(private http: HttpClient) { }
 
   async getPokemones():Promise<Resultado[]>{
-    const randomSearch = Math.floor(Math.random() * 700) + 1;
+    const randomSearch = Math.floor(Math.random() * 600) + 1;
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=50&offset=${randomSearch}`);
     const resJson = await res.json();
 

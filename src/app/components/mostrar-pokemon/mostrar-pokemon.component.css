@@ -17,9 +17,9 @@
 }
 
 .cardPokemon{
-  background-color: aquamarine;
+  /*background-color: aquamarine;*/
   border: 2px solid #8e8b8b;
-  margin: 3px;
+  margin: 7px;
 }
 
 .serachContainer{
@@ -31,4 +31,22 @@
 .ErrorBusqueda{
   margin-left: 20px;
   color: red;
+}
+
+.btnSearch{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: coral;
+  cursor: pointer;
+  border: none;
+}
+
+.btnSearch:hover{
+  width: 105px;
+  height: 33px;
+  border-radius: 5px;
+  background-color: coral;
+  cursor: pointer;
+  font-weight: bold;
 }
